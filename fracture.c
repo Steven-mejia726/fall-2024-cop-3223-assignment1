@@ -39,3 +39,13 @@ double caluclateHeight()
 {
 
 }
+
+//Creating a helper function to ask the user for two points
+void userPoints() 
+{
+    //Initialing variables
+    double point1 = 0.0
+    double point2 = 0.0
+    printf("Input your first point: ")
+    scanf()
+}
