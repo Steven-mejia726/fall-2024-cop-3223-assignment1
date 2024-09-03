@@ -1,6 +1,6 @@
 // Inputting libraries 
 #include <stdio.h>
-# include <math.h>
+#include <math.h>
 
 //Creating main function
 int main(int argc, char **argv) 
