@@ -13,7 +13,26 @@ int main(int argc, char **argv)
 //Creating function to calculate distance between two points
 double calculateDistance()
 {
+  //Initializing variable
+  double x1 = 0.0
+  double x2 = 0.0
+  double y1 = 0.0
+  double y2 = 0.0
+  double totalDistance = 0.0;
 
+  //Printing out user inputed info
+  printf("Point 1 entered: x1 = ");
+  x1 = userInputs();
+  printf("; y1 = ");
+  y1 = userInputs();
+  printf("Point 2 was entered: x2 = ");
+  x2 = userInputs();
+  printf("; y2 = ");
+  y2 = userInputs();
+
+  totalDistance = sqrt(pow(x2+x1, 2) + pow(y2+y1, 2));
+  printf(totalDistance);
+  return totalDistance;
 }
 
 //Creating function to calculate perimeter of a city 
@@ -40,12 +59,13 @@ double caluclateHeight()
 
 }
 
-//Creating a helper function to ask the user for two points
-void userPoints() 
+//Creating a function to ask for user input.
+double userInputs() 
 {
-    //Initialing variables
-    double point1 = 0.0
-    double point2 = 0.0
-    printf("Input your first point: ")
-    scanf()
+  //Initializing variable
+    double userInput = 0.0
+    
+    //Asking for user input
+    scanf(%lf, &userInput);
+    return userInput;
 }
