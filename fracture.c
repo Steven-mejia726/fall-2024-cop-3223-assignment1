@@ -68,7 +68,17 @@ return 3.0;
 //Creating function that calculates the area of a city encompessed by two points
 double calculateArea()
 {
+  //Initialzing variables
+  double area = 0.0;
+  double radius = calculateDistance()/2;
 
+  //Finding Area
+  area = Pi * pow(radius, 2);
+
+  //Printing Area
+  printf("The area of the city encompassed by your request is %lf", area);
+  
+  return 1.0
 }
 
 //Creating a function that calculates the width of the city
