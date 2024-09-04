@@ -92,7 +92,7 @@ double calculateArea()
 double calculateWidth()
 {
   //initialzing variable
-  double width = totalDistance();
+  double width = calculateDistance();
 
   //Printing width
   printf("The width of the city encompassed by your request is %lf \n", width);
@@ -101,12 +101,15 @@ double calculateWidth()
 }
 
 //Creating a function that calculates the height of the city
-double caluclateHeight()
+double calculateHeight()
 {
   //Initialzing variables
-  double height = totalDistance();
-
+  double height = calculateDistance();
+  
+  //Printing out height
   printf("The height of the city encompassed by your request is %lf \n", height);
+
+  return 1.0;
 }
 
 //Creating main function
@@ -116,7 +119,7 @@ int main(int argc, char **argv)
   calculatePerimeter();
   calculateArea();
   calculateWidth();
-  caluclateHeight();
+  calculateHeight();
   
   return 0;
 }
