@@ -1,4 +1,9 @@
-// Inputting libraries 
+//Steven Mejia
+//NID: st559049
+//UCF ID: 5523538
+
+
+// Inputing libraries 
 #include <stdio.h>
 #include <math.h>
 
@@ -28,24 +33,26 @@ double calculateDistance()
   double totalDistance = 0.0;
 
   //Asking user for inputs on position of points
-  printf("Type in x coordinate of first point: ");
+  printf("Type in the x coordinate of the first point: ");
   x1 = userInputs();
-  printf("Type in x coordinate of second point: ");
+  printf("Type in the x coordinate of the second point: ");
   x2 = userInputs();
-  printf("Type in y coordinate of first point: ");
+  printf("Type in the y coordinate of the first point: ");
   y1 = userInputs();
-  printf("Type in y coordinate of second point: ");
+  printf("Type in the y coordinate of the second point: ");
   y2 = userInputs();
   
   //Printing out user inputs
   printf("Point #1 entered: x1 = %.3lf; y1 = %.3lf \n", x1, y1);
-  printf("Point #2 entered: x2 = %.3lf; y2 = %.3lf \n", x1, y1);
+  printf("Point #2 entered: x2 = %.3lf; y2 = %.3lf \n", x2, y2);
 
   //Calculating distance between two points
-  totalDistance = sqrt(pow(x2+x1, 2) + pow(y2+y1, 2));
+  totalDistance = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
 
   //Priting distance between two points
   printf("The distance between the two points is %.3f \n", totalDistance);
+
+  //Difficulty level 3.0, had some nasty bugs and some errors that were hard to see at first.
   return totalDistance;
 }
 
@@ -73,31 +80,43 @@ double calculateArea()
   double radius = calculateDistance()/2;
 
   //Finding Area
-  area = Pi * pow(radius, 2);
+  area = PI * pow(radius, 2);
 
   //Printing Area
-  printf("The area of the city encompassed by your request is %lf", area);
+  printf("The area of the city encompassed by your request is %.3lf \n", area);
   
-  return 1.0
+  return 1.0;
 }
 
 //Creating a function that calculates the width of the city
 double calculateWidth()
 {
+  //initialzing variable
+  double width = totalDistance();
 
+  //Printing width
+  printf("The width of the city encompassed by your request is %lf \n", width);
+
+  return 1.0;
 }
 
 //Creating a function that calculates the height of the city
 double caluclateHeight()
 {
+  //Initialzing variables
+  double height = totalDistance();
 
+  printf("The height of the city encompassed by your request is %lf \n", height);
 }
 
 //Creating main function
 int main(int argc, char **argv) 
 {
-  double distance = calculateDistance();
-  double test = calculatePerimeter();  
-
+  calculateDistance();
+  calculatePerimeter();
+  calculateArea();
+  calculateWidth();
+  caluclateHeight();
+  
   return 0;
 }
