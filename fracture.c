@@ -13,19 +13,7 @@
 //Creating a function to ask for user input.
 double userInputs() 
 { 
-  //Initializing variable
-  double userInput = 0.0;
-    
-  //Asking for user input
-  scanf("%lf", &userInput);
-  return userInput;
-}
-
-
-//Creating function to calculate distance between two points
-double calculateDistance()
-{
-  //Initializing variable
+  //Initializing variables
   double x1 = 0.0;
   double x2 = 0.0;
   double y1 = 0.0;
@@ -34,21 +22,29 @@ double calculateDistance()
 
   //Asking user for inputs on position of points
   printf("Type in the x coordinate of the first point: ");
-  x1 = userInputs();
+  scanf("%lf",&x1);
   printf("Type in the x coordinate of the second point: ");
-  x2 = userInputs();
+  scanf("%lf",&x2);
   printf("Type in the y coordinate of the first point: ");
-  y1 = userInputs();
+  scanf("%lf",&y1);
   printf("Type in the y coordinate of the second point: ");
-  y2 = userInputs();
-  
+  scanf("%lf",&y2);
+
   //Printing out user inputs
   printf("Point #1 entered: x1 = %.3lf; y1 = %.3lf \n", x1, y1);
   printf("Point #2 entered: x2 = %.3lf; y2 = %.3lf \n", x2, y2);
 
   //Calculating distance between two points
   totalDistance = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
+  return totalDistance;
+}
 
+//Creating function to calculate distance between two points
+double calculateDistance()
+{
+  //Initializing variable
+  double totalDistance = userInputs();
+  
   //Priting distance between two points
   printf("The distance between the two points is %.3f \n", totalDistance);
 
@@ -61,7 +57,7 @@ double calculatePerimeter()
 {
   //Initialized variables
   double perimeter =0.0;
-  double diameter = calculateDistance();
+  double diameter = userInputs();
 
   //Making equation to find perimeter
   perimeter = PI * diameter;
@@ -77,7 +73,7 @@ double calculateArea()
 {
   //Initialzing variables
   double area = 0.0;
-  double radius = calculateDistance()/2;
+  double radius = userInputs()/2;
 
   //Finding Area
   area = PI * pow(radius, 2);
@@ -92,7 +88,7 @@ double calculateArea()
 double calculateWidth()
 {
   //initialzing variable
-  double width = calculateDistance();
+  double width = userInputs();
 
   //Printing width
   printf("The width of the city encompassed by your request is %lf \n", width);
@@ -104,7 +100,7 @@ double calculateWidth()
 double calculateHeight()
 {
   //Initialzing variables
-  double height = calculateDistance();
+  double height = userInputs();
   
   //Printing out height
   printf("The height of the city encompassed by your request is %lf \n", height);
